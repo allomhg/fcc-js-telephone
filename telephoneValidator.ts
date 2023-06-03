@@ -25,23 +25,23 @@ function telephoneCheck(str) {
     
 
     if ( match.length < 10 || match.length > 11 ) {
-        console.log('test 1')
+        //console.log('test 1')
         return false;
     } 
     else if ( countryTest == true ) {
-        console.log('test 2')
+        //console.log('test 2')
         return false;
     }
     else if ( match.length == 11 && ( match[0] !== '1' || str[0] !== '1' ) ) {
-        console.log('test 3')
+        //console.log('test 3')
         return false;
     }
     else if ( bracketMatch.length != 2 && bracketTest == true ) { // bracketMatch cannot be null
-        console.log('test 4')
+        //console.log('test 4')
         return false;
     } 
     else if ( bracketTest == true && areaTest == false) {
-        console.log('test 5')
+        //console.log('test 5')
         return false;
     }
     return true;

@@ -12,8 +12,6 @@ function telephoneCheck(str) {
     var bracketTest = bracketRegex.test(str);
     var areaTest = areaCodeRegex.test(str);
     var countryTest = countryRegex.test(str);
-    // console.log(countryTest);
-    // console.log(str.match(countryRegex));
     /*
     I feel like this is a terrible way to catch a null value.
     There has to be some better option.
@@ -21,42 +19,26 @@ function telephoneCheck(str) {
     if (bracketMatch == null) {
         bracketMatch = 0;
     }
-    //console.log(match);
-    //console.log(str.match(bracketRegex));
-    //console.log(bracketRegex.test(str));
-    //console.log(str.match(areaCodeRegex));
-    //console.log(areaCodeRegex.test(str));
     if (match.length < 10 || match.length > 11) {
-        console.log('test 1');
+        //console.log('test 1')
         return false;
     }
     else if (countryTest == true) {
-        console.log('test 2');
+        //console.log('test 2')
         return false;
     }
     else if (match.length == 11 && (match[0] !== '1' || str[0] !== '1')) {
-        console.log('test 3');
+        //console.log('test 3')
         return false;
     }
     else if (bracketMatch.length != 2 && bracketTest == true) { // bracketMatch cannot be null
-        console.log('test 4');
+        //console.log('test 4')
         return false;
     }
     else if (bracketTest == true && areaTest == false) {
-        console.log('test 5');
+        //console.log('test 5')
         return false;
     }
     return true;
 }
-//console.log(telephoneCheck("555-555-5555"));
-// console.log(telephoneCheck("(6054756961)"));  
-// console.log(telephoneCheck("10 (757) 622-7382")); 
-// console.log(telephoneCheck("11 555-555-5555")); 
-// console.log(telephoneCheck("1 555)555-5555"));
-console.log(telephoneCheck("-1 (757) 622-7382")); // just this one test that fails....
-//console.log(telephoneCheck("55 55-55-555-5"));
-// console.log(telephoneCheck("1 555-555-5555"));
-// console.log(telephoneCheck("1 (555) 555-5555"));
-// console.log(telephoneCheck("1(555)555-5555"));
-// console.log(telephoneCheck("1 555 555 5555"));
-// console.log(telephoneCheck("1 456 789 4444"));
+console.log(telephoneCheck("-1 (757) 622-7382")); // This was the last test I struggled to pass
