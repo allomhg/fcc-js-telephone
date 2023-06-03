@@ -15,9 +15,6 @@ function telephoneCheck(str) {
     const areaTest = areaCodeRegex.test(str);
     const countryTest = countryRegex.test(str);
 
-    // console.log(countryTest);
-    // console.log(str.match(countryRegex));
-
     /*
     I feel like this is a terrible way to catch a null value.
     There has to be some better option.
@@ -26,13 +23,6 @@ function telephoneCheck(str) {
         bracketMatch = 0;
     }
     
-    //console.log(match);
-    
-    //console.log(str.match(bracketRegex));
-    //console.log(bracketRegex.test(str));
-
-    //console.log(str.match(areaCodeRegex));
-    //console.log(areaCodeRegex.test(str));
 
     if ( match.length < 10 || match.length > 11 ) {
         console.log('test 1')
